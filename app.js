@@ -5,9 +5,23 @@ class VoiceAssistant {
         this.game1Card = document.getElementById('game1Card');
         this.game2Card = document.getElementById('game2Card');
         this.recognition = null;
+        this.checkSecurityContext();
         this.checkMicrophonePermission();
         this.setupSpeechRecognition();
         this.setupEventListeners();
+    }
+
+    checkSecurityContext() {
+        if (window.location.protocol !== 'https:' && window.location.hostname !== 'localhost') {
+            this.voiceButton.style.display = 'none';
+            this.resultText.innerHTML = `
+                <strong>Atenção:</strong> O reconhecimento de voz requer HTTPS.<br>
+                Por favor, acesse o site através do GitHub Pages:<br>
+                <a href="https://practiceemore.github.io/voice-assistant-web" target="_blank">
+                    https://practiceemore.github.io/voice-assistant-web
+                </a>
+            `;
+        }
     }
 
     async checkMicrophonePermission() {
