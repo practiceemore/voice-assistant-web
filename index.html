@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Voz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Assistente de Voz</h1>
+        
+        <div class="games-container">
+            <div class="game-card" id="game1Card">
+                <div class="game-content">
+                    <span class="material-icons">sports_esports</span>
+                    <h2>Jogo 1</h2>
+                </div>
+            </div>
+
+            <div class="game-card" id="game2Card">
+                <div class="game-content">
+                    <span class="material-icons">casino</span>
+                    <h2>Jogo 2</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-container">
+            <p id="resultText">Comando reconhecido aparecerá aqui...</p>
+        </div>
+
+        <button id="voiceButton" class="voice-button">
+            <span class="material-icons">mic</span>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
